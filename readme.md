@@ -3,7 +3,11 @@ Tomorrow
 
 > Close your eyes and I'll kiss you, tomorrow I'll miss you -- The Beatles
 
-This is a logging server using hyperloglog in Redis to count unique anonymous visitors, containing and serving as well the JavaScript library for doing client fingerprinting.
+Experimental service to provide a count of unique ANONYMOUS visitors to a website.
+
+Not having access to a unique id (cookie, session, etc), we attempt to fingerprint a user through examining their browser topology (device fingerprinting -- see https://panopticlick.eff.org/)
+
+Now that we have a lot of fingerprints, how do we efficiently store them, and get unique counts? For this we use a HyperLogLog, as implemented in Redis.
 
 ```
 require('tomorrow').start({
