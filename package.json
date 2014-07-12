@@ -1,6 +1,6 @@
 {
   "name": "tomorrow",
-  "version": "9.0.2",
+  "version": "9.0.3",
   "description": "Predict anonymous visitors tomorrow based on anonymous visitors today and -beyond",
   "main": "tomorrow.js",
   "scripts": {
